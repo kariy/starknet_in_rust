@@ -964,7 +964,7 @@ mod tests {
         // ---------------------
         let mut state_copy = state.clone_for_testing();
         let mut bock_context = BlockContext::default();
-        bock_context.starknet_os_config.gas_price = GasPrices::new(12, 0);
+        bock_context.block_info.gas_price = GasPrices::new(12, 0);
         assert!(
             declare
                 .execute(
